@@ -1,0 +1,16 @@
+.btn {
+    @extend .font-size-20;
+    @extend .p-4;
+
+    border-radius: 20px;
+    width: 300px;
+    background-color: map-get($colors, info);
+    color: map-get($colors, light);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}

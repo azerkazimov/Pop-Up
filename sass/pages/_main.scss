@@ -1,0 +1,40 @@
+main {
+    position: relative;
+    @extend .flex-container;
+    @extend .flex-column;
+    @extend .flex-justify-center;
+
+    height: 100vh;
+
+    .pop-up {
+        @extend .p-5;
+        position: absolute;
+        width: 400px;
+        background-color: map-get($colors, light);
+        border-radius: 6px;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        visibility: hidden;
+        text-align: center;
+        transition: transform 0.4s, top 0.4s;
+
+        &.open-pop-up {
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+
+        }
+
+        i {
+            @extend .font-size-80;
+            color: map-get($colors, success);
+        }
+
+        i,
+        h2,
+        p {
+            @extend .pb-2;
+        }
+    }
+}
